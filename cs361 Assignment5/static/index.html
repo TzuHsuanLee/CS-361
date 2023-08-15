@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8' />
+        <link rel='stylesheet' href='../public/css/style.css'>
+        <title>Board & Train</title>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <h1>VIEW DOGS</h1>
+            <nav>
+                <a href='index.html'>View Dogs</a>
+            <nav>
+        </header>
+
+        <div>
+            <!-- Display Options -->
+            <div class='display-options'>
+                <!-- Search by name -->
+                <div>
+                    <span class='tooltip'>
+                        <span class='tooltiptext'>Use this search bar to find a dog by name.</span>
+                        Search:
+                    </span>
+                    <input type='text' id='search-bar' onkeyup='searchDogs()'>
+                </div>
+                <!-- Filter by status-->
+                <div>
+                    <span class='tooltip'>
+                        <span class='tooltiptext'>Use these options to show dogs by status.</span>
+                        Filter:
+                    </span>
+                    <input type='radio' id='all' name='status' value='all' onclick='filterDogs(this)' checked>
+                    <label for='all'>all (3)</label>
+                    <input type='radio' id='active' name='status' value='active' onclick='filterDogs(this)'>
+                    <label for='active'>active (2)</label>
+                    <input type='radio' id='inactive' name='status' value='inactive' onclick='filterDogs(this)'>
+                    <label for='inactive'>inactive (1)</label>
+                </div>
+            </div>
+
+            <!-- Display all dogs -->
+            <table id='dog-table'>
+                <tr>
+                    <!-- Colt -->
+                    <td dog-name='colt' dog-status='active'>
+                        <img src='../public/dog_images/Colt.jpg' width='200px'>
+                        <figcaption class='dog-name'>
+                            <a href='colt.html'>Colt</a>
+                        </figcaption>
+                    </td>
+                    <!-- Haku -->
+                    <td dog-name='haku' dog-status='active'>
+                        <img src='../public/dog_images/Haku.jpg' width='200px'>
+                        <figcaption class='dog-name'>
+                            <a href='haku.html'>Haku</a>
+                        </figcaption>
+                    </td>
+                    <!-- Luna -->
+                    <td dog-name='luna' dog-status='inactive'>
+                        <img src='../public/dog_images/Luna.jpg' width='200px'>
+                        <figcaption class='dog-name'>
+                            <a href='luna.html'>Luna</a>
+                        </figcaption>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>
+
+
+<!-- Embed JS -->
+<script src='../public/js/display-dogs.js'></script>
